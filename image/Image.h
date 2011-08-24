@@ -43,31 +43,29 @@ namespace image {
          *
          * @param file The name of the image file.
          */
-        Image (const string& file) : file_ (file), surface_ (IMG_Load (file_.c_str ())) {
-            if (surface_ == NULL)
-                throw runtime_error ("Failed to load image " + fileName);
-        };
+        Image (const string& file) : file_ (file), surface_ (IMG_Load (file_.c_str ())) {};
 
         /**
          * Enable RLE acceleration.
          */
         void enableRLEAcceleration () { SDL_SetColorKey(surface_.to_c (), SDL_RLEACCEL, surface_.to_c ()->format->colorkey); };
 
+        typedef bool (*Comparator) (SDL_RWops* ops);
+
         /**
          * Determines if the image is of the specified type.
          *
          * @tparam Comparator, The comparison function.
          *
-         * @param fileName, The name of the image file.
          * @param comparator, The comparison function.
          *
          * @return True if is, false otherwise.
          */
         template<typename Comparator>
-        static bool is (const string& fileName, Comparator comparator) {
-            SDL_RWops* ops = SDL_RWFromFile (fileName.c_str (), "rb");
+        bool is (Comparator comparator) {
+            SDL_RWops* ops = SDL_RWFromFile (file_.c_str (), "rb");
             if (ops == NULL)
-                throw runtime_error ("Failed to open " + fileName);
+                throw runtime_error ("Failed to open " + file_);
             return comparator (ops) == 1;
         };
 
