@@ -80,8 +80,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <h1>sdl::image::Image Struct Reference</h1>  </div>
 </div>
@@ -101,20 +101,37 @@ Collaboration diagram for sdl::image::Image:</div>
 
 <p><a href="structsdl_1_1image_1_1Image-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsdl_1_1image_1_1Image.html#a1205125ccc2199f4a44fac6db52cc205">Comparator</a> )(SDL_RWops *ops)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsdl_1_1image_1_1Image.html#a683b4a4bced35fcaa7391bef5226252c">Image</a> (const string &amp;file)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsdl_1_1image_1_1Image.html#ae3b85a4e4d82a5ea08d710d46d2beacf">enableRLEAcceleration</a> ()</td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Comparator &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structsdl_1_1image_1_1Image.html#a32d944fc46cbe8615ae23e6b8e0f828c">is</a> (const string &amp;fileName, Comparator comparator)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structsdl_1_1image_1_1Image.html#a9258b41331b37f1c05fff5235280decb">is</a> (<a class="el" href="structsdl_1_1image_1_1Image.html#a1205125ccc2199f4a44fac6db52cc205">Comparator</a> comparator)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents an image. </p>
 
 <p>Definition at line <a class="el" href="image_2Image_8h_source.html#l00040">40</a> of file <a class="el" href="image_2Image_8h_source.html">Image.h</a>.</p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a1205125ccc2199f4a44fac6db52cc205"></a><!-- doxytag: member="sdl::image::Image::Comparator" ref="a1205125ccc2199f4a44fac6db52cc205" args=")(SDL_RWops *ops)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef bool(* <a class="el" href="structsdl_1_1image_1_1Image.html#a1205125ccc2199f4a44fac6db52cc205">sdl::image::Image::Comparator</a>)(SDL_RWops *ops)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="image_2Image_8h_source.html#l00053">53</a> of file <a class="el" href="image_2Image_8h_source.html">Image.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a683b4a4bced35fcaa7391bef5226252c"></a><!-- doxytag: member="sdl::image::Image::Image" ref="a683b4a4bced35fcaa7391bef5226252c" args="(const string &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
@@ -157,32 +174,22 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 <p>Enable RLE acceleration. </p>
 
-<p>Definition at line <a class="el" href="image_2Image_8h_source.html#l00054">54</a> of file <a class="el" href="image_2Image_8h_source.html">Image.h</a>.</p>
+<p>Definition at line <a class="el" href="image_2Image_8h_source.html#l00051">51</a> of file <a class="el" href="image_2Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a32d944fc46cbe8615ae23e6b8e0f828c"></a><!-- doxytag: member="sdl::image::Image::is" ref="a32d944fc46cbe8615ae23e6b8e0f828c" args="(const string &amp;fileName, Comparator comparator)" -->
+<a class="anchor" id="a9258b41331b37f1c05fff5235280decb"></a><!-- doxytag: member="sdl::image::Image::is" ref="a9258b41331b37f1c05fff5235280decb" args="(Comparator comparator)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Comparator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">static bool sdl::image::Image::is </td>
+          <td class="memname">bool sdl::image::Image::is </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Comparator&#160;</td>
-          <td class="paramname"><em>comparator</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline, static]</code></td>
+          <td class="paramtype"><a class="el" href="structsdl_1_1image_1_1Image.html#a1205125ccc2199f4a44fac6db52cc205">Comparator</a>&#160;</td>
+          <td class="paramname"><em>comparator</em></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -196,14 +203,13 @@ template&lt;typename Comparator &gt; </div>
 </dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">fileName,The</td><td>name of the image file. </td></tr>
     <tr><td class="paramname">comparator,The</td><td>comparison function.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>True if is, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="image_2Image_8h_source.html#l00067">67</a> of file <a class="el" href="image_2Image_8h_source.html">Image.h</a>.</p>
+<p>Definition at line <a class="el" href="image_2Image_8h_source.html#l00065">65</a> of file <a class="el" href="image_2Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -217,7 +223,7 @@ template&lt;typename Comparator &gt; </div>
       <li class="navelem"><a class="el" href="namespacesdl.html">sdl</a>      </li>
       <li class="navelem"><a class="el" href="namespacesdl_1_1image.html">image</a>      </li>
       <li class="navelem"><a class="el" href="structsdl_1_1image_1_1Image.html">Image</a>      </li>
-      <li class="footer">Generated on Wed Aug 24 2011 00:09:07 for SDL_image++ by&#160;
+      <li class="footer">Generated on Wed Aug 24 2011 12:02:39 for SDL_image++ by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>
@@ -227,7 +233,7 @@ template&lt;typename Comparator &gt; </div>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
